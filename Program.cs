@@ -7,6 +7,7 @@ namespace TranscriptMakerBot{
         static void Main(string[] args){
             MainAsync().GetAwaiter().GetResult();
         }
+
         static async Task MainAsync(){
             var discord = new DiscordClient(new DiscordConfiguration(){
                 Token = "ODg3ODA5MjM3MDA5NDQwODAw.YUJiyA.w - oJYAb9TVhGNzPmwrCEsY5eqmo",
