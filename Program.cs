@@ -1,7 +1,7 @@
-﻿using DSharpPlus;
-using DSharpPlus.Entities;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using DSharpPlus;
+using DSharpPlus.CommandsNext;
 
 namespace TranscriptMakerBot
 {
@@ -20,16 +20,12 @@ namespace TranscriptMakerBot
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.AllUnprivileged
             });
-           
-            discord.MessageCreated += async (sender, e) =>{
-                if (e.Message.Content.ToLower().StartsWith("ping"))
-                {
-                    e.Message.RespondAsync($"Your ping is {discord.Ping} ms.");
-                    
-                }
-                    
-                    
-            };
+            CommandsNextExtension commands = discord.UseCommandsNext(new CommandsNextConfiguration()
+            {
+                StringPrefixes = new[] {"!"}
+            });
+
+            commands.RegisterCommands<ChatRecorderCommands>();
 
             await discord.ConnectAsync();
             await Task.Delay(-1);
