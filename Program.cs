@@ -2,13 +2,17 @@
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using System.Collections.Generic;
 
 namespace TranscriptMakerBot
 {
-    class Program
-    {
+    static class Program
+    {   
+        public static Dictionary<string, chatRecorder> channelRecorderList = new Dictionary<string, chatRecorder>();
+
         static void Main(string[] args)
         {
+            Console.WriteLine("Running bot.");
             MainAsync().GetAwaiter().GetResult();
         }
 
