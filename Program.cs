@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
-using System.Collections.Generic;
+using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
     static class Program
-    {   
-        public static Dictionary<string, chatRecorder> channelRecorderList = new Dictionary<string, chatRecorder>();
+    {
+        public static DiscordClient discord = new DiscordClient(new DiscordConfiguration()
+        {
+            Token = "ODg3ODA5MjM3MDA5NDQwODAw.YUJiyA.w - oJYAb9TVhGNzPmwrCEsY5eqmo",
+            TokenType = TokenType.Bot,
+            Intents = DiscordIntents.AllUnprivileged
+        });
+        public static Dictionary<DiscordChannel, ChatRecorder> dictionaryOfRecorders = new Dictionary<DiscordChannel, ChatRecorder>();
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Running bot.");
             MainAsync().GetAwaiter().GetResult();
         }
 
         static async Task MainAsync()
         {
-            DiscordClient discord = new DiscordClient(new DiscordConfiguration()
-            {
-                Token = "ODg3ODA5MjM3MDA5NDQwODAw.YUJiyA.w - oJYAb9TVhGNzPmwrCEsY5eqmo",
-                TokenType = TokenType.Bot,
-                Intents = DiscordIntents.AllUnprivileged
-            });
             CommandsNextExtension commands = discord.UseCommandsNext(new CommandsNextConfiguration()
             {
                 StringPrefixes = new[] {"!"}
