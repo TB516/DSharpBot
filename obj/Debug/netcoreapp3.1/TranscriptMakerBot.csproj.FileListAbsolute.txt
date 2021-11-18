@@ -15,7 +15,6 @@ D:\Programing_projects\C#\TranscriptMakerBot\bin\Debug\netcoreapp3.1\Microsoft.E
 D:\Programing_projects\C#\TranscriptMakerBot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Programing_projects\C#\TranscriptMakerBot\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\Programing_projects\C#\TranscriptMakerBot\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
-D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.csprojAssemblyReference.cache
 D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.AssemblyInfoInputs.cache
 D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.AssemblyInfo.cs
 D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.csproj.CoreCompileInputs.cache
@@ -23,3 +22,5 @@ D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptM
 D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.dll
 D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.pdb
 D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.genruntimeconfig.cache
+D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.csproj.AssemblyReference.cache
+D:\Programing_projects\C#\TranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.GeneratedMSBuildEditorConfig.editorconfig

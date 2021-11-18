@@ -26,6 +26,8 @@ namespace TranscriptMakerBot
         {
             if (Program.dictionaryOfRecorders.ContainsKey(ctx.Channel))
             {
+                //program.dictionaryOfRecorders[ctx.Channel].
+
                 Program.dictionaryOfRecorders.Remove(ctx.Channel);
 
                 ctx.RespondAsync("Recording ended!");   

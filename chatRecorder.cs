@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 using DSharpPlus;
-using DSharpPlus.CommandsNext;
+using DSharpPlus.EventArgs;
 using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
@@ -11,7 +11,6 @@ namespace TranscriptMakerBot
     {
         private DiscordChannel channel;
         private string conversationTopic;
-        private StreamWriter transcriptFile;
         private string path;
 
         public ChatRecorder(DiscordChannel _channel, string topic)
@@ -19,7 +18,23 @@ namespace TranscriptMakerBot
             channel = _channel;
             conversationTopic = topic;
             path = @$"D:\Programing_projects\C#\TranscriptMakerBot\{channel.Id}_{conversationTopic}.txt";
-            transcriptFile = File.CreateText(path);
+
+            //transcriptFile = new StreamWriter(path);
+            //transcriptFile.WriteLine($"This conversation is on {conversationTopic}");
+
+            Program.discord.MessageCreated += WriteToTextFile;
+        }
+
+        private async Task WriteToTextFile(DiscordClient sender, MessageCreateEventArgs e)
+        {
+            if (e.Message.Channel == channel && !e.Message.Author.IsBot)
+            {
+                using (StreamWriter transcriptFile = new StreamWriter(path))
+                {
+                    Console.WriteLine($"<{e.Author.Username}> {e.Message.Content}");
+                    transcriptFile.WriteLine($"<{e.Author.Username}> {e.Message.Content}");
+                }
+            }
         }
     }
 }
