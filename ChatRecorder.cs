@@ -9,15 +9,18 @@ namespace TranscriptMakerBot
 {
     class ChatRecorder
     {
-        private DiscordChannel channel;
-        private string conversationTopic;
-        private string path;
+        DiscordGuild guild { get; set; }
+        public DiscordChannel channel { get; set; }
+        private string conversationTopic { get; set; }
+        private string path { get; set; }
 
         public ChatRecorder(DiscordChannel _channel, string topic)
         {
             channel = _channel;
             conversationTopic = topic;
-            path = @$"D:\Programing_projects\C#\TranscriptMakerBot\{channel.Id}_{conversationTopic}.txt";
+
+            guild = channel.Guild;
+            path = @$"{Directory.GetCurrentDirectory()}\{conversationTopic}_{channel.Id}.txt";
 
             //transcriptFile = new StreamWriter(path);
             //transcriptFile.WriteLine($"This conversation is on {conversationTopic}");

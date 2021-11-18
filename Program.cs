@@ -15,13 +15,12 @@ namespace TranscriptMakerBot
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged
         });
-        public static Dictionary<DiscordChannel, ChatRecorder> dictionaryOfRecorders = new Dictionary<DiscordChannel, ChatRecorder>();
+        public static List<ChatRecorder> chatRecorders = new List<ChatRecorder>();
 
         static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
         }
-
         static async Task MainAsync()
         {
             discord.UseCommandsNext(new CommandsNextConfiguration()
@@ -31,7 +30,8 @@ namespace TranscriptMakerBot
 
             await discord.ConnectAsync();
             Console.WriteLine("Connected");
-            await Task.Delay(-1);
+            while(Console.ReadLine() != "stop");
+            //await Task.Delay(-1);
         }
     }
 }
