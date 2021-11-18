@@ -7,6 +7,7 @@ using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
+    //three
     static class Program
     {
         public static DiscordClient discord = new DiscordClient(new DiscordConfiguration()
