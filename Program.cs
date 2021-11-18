@@ -34,10 +34,5 @@ namespace TranscriptMakerBot
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
-
-        private static Task Discord_MessageCreated(DiscordClient sender, DSharpPlus.EventArgs.MessageCreateEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

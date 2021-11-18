@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using DSharpPlus;
+using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
