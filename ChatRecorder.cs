@@ -7,8 +7,6 @@ using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
-
-    //One
     class ChatRecorder
     {
         private DiscordChannel channel;

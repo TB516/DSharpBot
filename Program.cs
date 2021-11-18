@@ -7,7 +7,6 @@ using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
-    //three
     static class Program
     {
         public static DiscordClient discord = new DiscordClient(new DiscordConfiguration()
@@ -25,14 +24,13 @@ namespace TranscriptMakerBot
 
         static async Task MainAsync()
         {
-            CommandsNextExtension commands = discord.UseCommandsNext(new CommandsNextConfiguration()
+            discord.UseCommandsNext(new CommandsNextConfiguration()
             {
                 StringPrefixes = new[] {"!"}
-            });
-
-            commands.RegisterCommands<ChatRecorderCommands>();
+            }).RegisterCommands<ChatRecorderCommands>();
 
             await discord.ConnectAsync();
+            Console.WriteLine("Connected");
             await Task.Delay(-1);
         }
     }
