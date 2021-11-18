@@ -7,6 +7,8 @@ using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
+
+    //One
     class ChatRecorder
     {
         private DiscordChannel channel;
@@ -29,7 +31,6 @@ namespace TranscriptMakerBot
         {
             if (e.Message.Channel == channel && !e.Message.Author.IsBot)
             {
-                //sus
                 using (StreamWriter transcriptFile = new StreamWriter(path))
                 {
                     Console.WriteLine($"<{e.Author.Username}> {e.Message.Content}");
