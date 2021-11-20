@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9x/9pD7sqBmWK2d/YPRPtprg57gAytS6eCl7sncaYRQopizzP89KDVe0ziBdeM7q2YF02oy2kD5w8IsPbNlMLg==",
+  "dgSpecHash": "Yz327ipWf3uagWCApmpKF9y7OErXqO6H0LhD3LBjHHZPwERsPBFc8rKVWjRLO6UZn//MjBeG5uRxGj3ewyVAug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sammy\\OneDrive\\Desktop\\Github Forks\\TranscriptMakerBot.csproj",
+  "projectFilePath": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sammy\\.nuget\\packages\\concurrenthashset\\1.1.0\\concurrenthashset.1.1.0.nupkg.sha512",
     "C:\\Users\\sammy\\.nuget\\packages\\dsharpplus\\4.1.0\\dsharpplus.4.1.0.nupkg.sha512",

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
-using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
@@ -15,23 +13,24 @@ namespace TranscriptMakerBot
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged
         });
-        public static Dictionary<DiscordChannel, ChatRecorder> dictionaryOfRecorders = new Dictionary<DiscordChannel, ChatRecorder>();
+        
 
         static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
         }
-
         static async Task MainAsync()
         {
-            discord.UseCommandsNext(new CommandsNextConfiguration()
+            CommandsNextExtension cne = discord.UseCommandsNext(new CommandsNextConfiguration()
             {
-                StringPrefixes = new[] {"!"}
-            }).RegisterCommands<ChatRecorderCommands>();
+                StringPrefixes = new[] { "!" }
+            });
+            cne.RegisterCommands<ChatRecorderCommands>();
 
             await discord.ConnectAsync();
             Console.WriteLine("Connected");
-            await Task.Delay(-1);
+            while(Console.ReadLine() != "stop");
+            //await Task.Delay(-1);
         }
     }
 }

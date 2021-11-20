@@ -1,40 +1,45 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using DSharpPlus;
 using DSharpPlus.EventArgs;
 using DSharpPlus.Entities;
 
 namespace TranscriptMakerBot
 {
-    class ChatRecorder
+    class ChatRecorder : IDisposable
     {
-        private DiscordChannel channel;
-        private string conversationTopic;
-        private string path;
+        public static List<ChatRecorder> chatRecorders = new List<ChatRecorder>();
+        public DiscordChannel channel { get; set; }
+        public string conversationTopic { get; set; }
+        private string transcriptFilePath { get; set; }
+        private StreamWriter transcriptFileWriter { get; set; }
 
-        public ChatRecorder(DiscordChannel _channel, string topic)
+        public ChatRecorder(DiscordChannel _channel, string _conversationTopic)
         {
             channel = _channel;
-            conversationTopic = topic;
-            path = @$"D:\Programing_projects\C#\TranscriptMakerBot\{channel.Id}_{conversationTopic}.txt";
+            conversationTopic = _conversationTopic;
 
-            //transcriptFile = new StreamWriter(path);
-            //transcriptFile.WriteLine($"This conversation is on {conversationTopic}");
-
+            Directory.CreateDirectory(@$"{Directory.GetCurrentDirectory()}\Records");
+            transcriptFilePath = @$"{Directory.GetCurrentDirectory()}\Records\{conversationTopic}_{channel.Id}.txt";
+            transcriptFileWriter = new StreamWriter(transcriptFilePath);
             Program.discord.MessageCreated += WriteToTextFile;
         }
-
         private async Task WriteToTextFile(DiscordClient sender, MessageCreateEventArgs e)
         {
             if (e.Message.Channel == channel && !e.Message.Author.IsBot)
             {
-                using (StreamWriter transcriptFile = new StreamWriter(path))
-                {
-                    Console.WriteLine($"<{e.Author.Username}> {e.Message.Content}");
-                    transcriptFile.WriteLine($"<{e.Author.Username}> {e.Message.Content}");
-                }
+                DiscordMember messageAuthorMember = await e.Guild.GetMemberAsync(e.Author.Id);
+                transcriptFileWriter.WriteLine($"<{messageAuthorMember.DisplayName}> {e.Message.Content}");
             }
+        }
+        public void Dispose()
+        {
+            Program.discord.MessageCreated -= WriteToTextFile;
+            transcriptFileWriter.Flush();
+            transcriptFileWriter.Close();
+            transcriptFileWriter.Dispose();
         }
     }
 }
