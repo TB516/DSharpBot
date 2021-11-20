@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sammy\\OneDrive\\Desktop\\Github Forks\\TranscriptMakerBot.csproj": {}
+    "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sammy\\OneDrive\\Desktop\\Github Forks\\TranscriptMakerBot.csproj": {
+    "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sammy\\OneDrive\\Desktop\\Github Forks\\TranscriptMakerBot.csproj",
+        "projectUniqueName": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj",
         "projectName": "TranscriptMakerBot",
-        "projectPath": "C:\\Users\\sammy\\OneDrive\\Desktop\\Github Forks\\TranscriptMakerBot.csproj",
+        "projectPath": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj",
         "packagesPath": "C:\\Users\\sammy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sammy\\OneDrive\\Desktop\\Github Forks\\obj\\",
+        "outputPath": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sammy\\AppData\\Roaming\\NuGet\\NuGet.Config",

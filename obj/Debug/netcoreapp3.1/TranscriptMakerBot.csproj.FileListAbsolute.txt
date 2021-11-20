@@ -49,3 +49,28 @@ C:\Users\sammy\OneDrive\Desktop\Github Forks\obj\Debug\netcoreapp3.1\TranscriptM
 C:\Users\sammy\OneDrive\Desktop\Github Forks\obj\Debug\netcoreapp3.1\TranscriptMakerBot.dll
 C:\Users\sammy\OneDrive\Desktop\Github Forks\obj\Debug\netcoreapp3.1\TranscriptMakerBot.pdb
 C:\Users\sammy\OneDrive\Desktop\Github Forks\obj\Debug\netcoreapp3.1\TranscriptMakerBot.genruntimeconfig.cache
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\TranscriptMakerBot.exe
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\TranscriptMakerBot.deps.json
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\TranscriptMakerBot.runtimeconfig.json
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\TranscriptMakerBot.runtimeconfig.dev.json
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\TranscriptMakerBot.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\TranscriptMakerBot.pdb
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\ConcurrentCollections.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\DSharpPlus.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\DSharpPlus.CommandsNext.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\DSharpPlus.Interactivity.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\Emzi0767.Common.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.csprojAssemblyReference.cache
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.AssemblyInfoInputs.cache
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.AssemblyInfo.cs
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.csproj.CoreCompileInputs.cache
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.csproj.CopyComplete
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.dll
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.pdb
+C:\Users\sammy\OneDrive\Desktop\ThomasTranscriptMakerBot\obj\Debug\netcoreapp3.1\TranscriptMakerBot.genruntimeconfig.cache
