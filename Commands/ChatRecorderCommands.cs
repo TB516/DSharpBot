@@ -6,35 +6,36 @@ namespace TranscriptMakerBot
 {
     class ChatRecorderCommands : BaseCommandModule
     {
-        [Command("startRecording")]
-        public async Task recordChannel(CommandContext ctx, [RemainingText] string topic)
+        [Command("startRec")]
+        public async Task RecordChannel(CommandContext ctx, [RemainingText] string conversationTopic)
         {
-            if (!Program.dictionaryOfRecorders.ContainsKey(ctx.Channel))
+            for (int i = 0; i < ChatRecorder.chatRecorders.Count; i++)
             {
-                Program.dictionaryOfRecorders.Add(ctx.Channel, new ChatRecorder(ctx.Channel, topic));
-
-                ctx.RespondAsync($"Started recording this chat! \nThis recording is about {topic}.");
+                if(ChatRecorder.chatRecorders[i].conversationTopic == conversationTopic)
+                {
+                    ctx.RespondAsync($"Recording with the topic \"{conversationTopic}\" is already running");
+                    return;
+                }    
             }
-            else
-            {
-                ctx.RespondAsync($"This channel is already being recorded!");
-            }
+            ChatRecorder.chatRecorders.Add(new ChatRecorder(ctx.Channel, conversationTopic));
+            ctx.RespondAsync($"Started recording this chat! \nThis recording is about {conversationTopic}.");
         }
 
-        [Command("endRecording")]
-        public async Task endRecording(CommandContext ctx)
+        [Command("stopRec")]
+        public async Task EndRecording(CommandContext ctx, [RemainingText] string conversationTopic)
         {
-            if (Program.dictionaryOfRecorders.ContainsKey(ctx.Channel))
+            for(int i = 0; i < ChatRecorder.chatRecorders.Count; i++)
             {
-                //program.dictionaryOfRecorders[ctx.Channel].
-
-                Program.dictionaryOfRecorders.Remove(ctx.Channel);
-
-                ctx.RespondAsync("Recording ended!");   
-            }
-            else
-            {
-                ctx.RespondAsync("This chat isn't being recorded!");
+                if(
+                    ChatRecorder.chatRecorders[i].channel == ctx.Channel &&
+                    ChatRecorder.chatRecorders[i].conversationTopic == conversationTopic
+                )
+                {
+                    ChatRecorder.chatRecorders[i].Dispose();
+                    ChatRecorder.chatRecorders.RemoveAt(i);
+                    ctx.RespondAsync($"Recording about \"{conversationTopic}\" ended!");
+                    return;
+                }
             }
         }
     }
