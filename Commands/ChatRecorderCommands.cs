@@ -18,7 +18,7 @@ namespace TranscriptMakerBot
                 }    
             }
             ChatRecorder.chatRecorders.Add(new ChatRecorder(ctx.Channel, conversationTopic));
-            ctx.RespondAsync($"Started recording this chat! \nThis recording is about {conversationTopic}.");
+            ctx.RespondAsync($"Started recording this chat! \nThis recording is about \"{conversationTopic}\".");
         }
 
         [Command("stopRec")]
@@ -26,10 +26,7 @@ namespace TranscriptMakerBot
         {
             for(int i = 0; i < ChatRecorder.chatRecorders.Count; i++)
             {
-                if(
-                    ChatRecorder.chatRecorders[i].channel == ctx.Channel &&
-                    ChatRecorder.chatRecorders[i].conversationTopic == conversationTopic
-                )
+                if(ChatRecorder.chatRecorders[i].channel == ctx.Channel && ChatRecorder.chatRecorders[i].conversationTopic == conversationTopic)
                 {
                     ChatRecorder.chatRecorders[i].Dispose();
                     ChatRecorder.chatRecorders.RemoveAt(i);

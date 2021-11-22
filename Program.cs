@@ -9,7 +9,7 @@ namespace TranscriptMakerBot
     {
         public static DiscordClient discord = new DiscordClient(new DiscordConfiguration()
         {
-            Token = "ODg3ODA5MjM3MDA5NDQwODAw.YUJiyA.w - oJYAb9TVhGNzPmwrCEsY5eqmo",
+            Token = System.Environment.GetEnvironmentVariable("MegaBot"),
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged
         });

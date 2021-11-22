@@ -4259,19 +4259,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sammy\\.nuget\\packages\\": {}
+    "C:\\Users\\tberr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj",
+      "projectUniqueName": "D:\\Programing_projects\\C#\\TranscriptMakerBot\\TranscriptMakerBot.csproj",
       "projectName": "TranscriptMakerBot",
-      "projectPath": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\TranscriptMakerBot.csproj",
-      "packagesPath": "C:\\Users\\sammy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sammy\\OneDrive\\Desktop\\ThomasTranscriptMakerBot\\obj\\",
+      "projectPath": "D:\\Programing_projects\\C#\\TranscriptMakerBot\\TranscriptMakerBot.csproj",
+      "packagesPath": "C:\\Users\\tberr\\.nuget\\packages\\",
+      "outputPath": "D:\\Programing_projects\\C#\\TranscriptMakerBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sammy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tberr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4325,7 +4325,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
