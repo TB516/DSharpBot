@@ -4264,11 +4264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programing_projects\\C#\\TranscriptMakerBot\\TranscriptMakerBot.csproj",
-      "projectName": "TranscriptMakerBot",
-      "projectPath": "D:\\Programing_projects\\C#\\TranscriptMakerBot\\TranscriptMakerBot.csproj",
+      "projectUniqueName": "D:\\Programing_projects\\C#\\DSharpBot\\DSharpBot.csproj",
+      "projectName": "DSharpBot",
+      "projectPath": "D:\\Programing_projects\\C#\\DSharpBot\\DSharpBot.csproj",
       "packagesPath": "C:\\Users\\tberr\\.nuget\\packages\\",
-      "outputPath": "D:\\Programing_projects\\C#\\TranscriptMakerBot\\obj\\",
+      "outputPath": "D:\\Programing_projects\\C#\\DSharpBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tberr\\AppData\\Roaming\\NuGet\\NuGet.Config",

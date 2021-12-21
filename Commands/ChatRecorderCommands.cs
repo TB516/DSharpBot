@@ -2,7 +2,7 @@
 using DSharpPlus.CommandsNext.Attributes;
 using System.Threading.Tasks;
 
-namespace TranscriptMakerBot
+namespace DSharpBot
 {
     class ChatRecorderCommands : BaseCommandModule
     {

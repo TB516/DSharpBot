@@ -6,7 +6,7 @@ using DSharpPlus;
 using DSharpPlus.EventArgs;
 using DSharpPlus.Entities;
 
-namespace TranscriptMakerBot
+namespace DSharpBot
 {
     class ChatRecorder : IDisposable
     {
