@@ -9,7 +9,7 @@ namespace DSharpBot
     {
         public static DiscordClient discord = new DiscordClient(new DiscordConfiguration()
         {
-            Token = System.Environment.GetEnvironmentVariable("MegaBot"),
+            Token = System.Environment.GetEnvironmentVariable("TBOT516"),
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged
         });

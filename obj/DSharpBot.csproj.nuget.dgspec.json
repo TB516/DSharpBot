@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programing_projects\\C#\\DSharpBot\\DSharpBot.csproj": {}
+    "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\DSharpBot.csproj": {}
   },
   "projects": {
-    "D:\\Programing_projects\\C#\\DSharpBot\\DSharpBot.csproj": {
+    "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\DSharpBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing_projects\\C#\\DSharpBot\\DSharpBot.csproj",
+        "projectUniqueName": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\DSharpBot.csproj",
         "projectName": "DSharpBot",
-        "projectPath": "D:\\Programing_projects\\C#\\DSharpBot\\DSharpBot.csproj",
+        "projectPath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\DSharpBot.csproj",
         "packagesPath": "C:\\Users\\tberr\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing_projects\\C#\\DSharpBot\\obj\\",
+        "outputPath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tberr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,20 +37,20 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.2.0, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.2.0, )"
             },
             "DSharpPlus.Interactivity": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.2.0, )"
             }
           },
           "imports": [
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
