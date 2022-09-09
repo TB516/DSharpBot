@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.SlashCommands;
 
 namespace DSharpBot
 {
@@ -25,7 +26,11 @@ namespace DSharpBot
             {
                 StringPrefixes = new[] { "!" }
             });
+            
+            //SlashCommandsExtension slash = discord.UseSlashCommands();
+
             cne.RegisterCommands<ChatRecorderCommands>();
+            //slash.RegisterCommands<ChatRecorderCommands>(724358800517365851);
 
             await discord.ConnectAsync();
             Console.WriteLine("Connected");
