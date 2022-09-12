@@ -22,15 +22,15 @@ namespace DSharpBot
         }
         static async Task MainAsync()
         {
-            CommandsNextExtension cne = discord.UseCommandsNext(new CommandsNextConfiguration()
+            /*CommandsNextExtension cne = discord.UseCommandsNext(new CommandsNextConfiguration()
             {
                 StringPrefixes = new[] { "!" }
-            });
+            });*/
             
-            //SlashCommandsExtension slash = discord.UseSlashCommands();
+            SlashCommandsExtension slash = discord.UseSlashCommands();
 
-            cne.RegisterCommands<ChatRecorderCommands>();
-            //slash.RegisterCommands<ChatRecorderCommands>(724358800517365851);
+            //cne.RegisterCommands<ChatRecorderCommands>();
+            slash.RegisterCommands<ChatRecorderCommands>();
 
             await discord.ConnectAsync();
             Console.WriteLine("Connected");
