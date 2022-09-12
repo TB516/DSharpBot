@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 
 namespace DSharpBot
 {
-    [SlashCommandGroup("ChatRecorder", "Commands for recording conversations and rendering them in the AA engine.")]
     class ChatRecorderCommands : ApplicationCommandModule
     {
         [SlashCommand("startRec", "Starts recording the channel it is called in.")]
