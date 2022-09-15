@@ -4778,11 +4778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\DSharpBot.csproj",
+      "projectUniqueName": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\DSharpBot\\DSharpBot.csproj",
       "projectName": "DSharpBot",
-      "projectPath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\DSharpBot.csproj",
+      "projectPath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\DSharpBot\\DSharpBot.csproj",
       "packagesPath": "C:\\Users\\tberr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\D# bot\\obj\\",
+      "outputPath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\DSharpBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tberr\\AppData\\Roaming\\NuGet\\NuGet.Config",
