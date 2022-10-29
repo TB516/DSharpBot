@@ -28,11 +28,10 @@ namespace DSharpBot
         }
         private async Task WriteToTextFile(DiscordClient sender, MessageCreateEventArgs e)
         {
-            if (e.Message.Channel == Channel && !e.Message.Author.IsBot)
-            {
-                DiscordMember messageAuthorMember = await e.Guild.GetMemberAsync(e.Author.Id);
-                TranscriptFileWriter.WriteLine($"<{messageAuthorMember.DisplayName}> {e.Message.Content}");
-            }
+            if (e.Message.Channel != Channel || e.Message.Author.IsBot) return;
+
+            DiscordMember messageAuthorMember = await e.Guild.GetMemberAsync(e.Author.Id);
+            TranscriptFileWriter.WriteLine($"<{messageAuthorMember.DisplayName}> {e.Message.Content}");
         }
         public void Dispose()
         {
