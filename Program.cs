@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.SlashCommands;
+using DSharpPlus.VoiceNext;
 
 namespace DSharpBot
 {
@@ -15,27 +16,21 @@ namespace DSharpBot
             Intents = DiscordIntents.AllUnprivileged
         });
         
-
         static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
         }
         static async Task MainAsync()
         {
-            /*CommandsNextExtension cne = discord.UseCommandsNext(new CommandsNextConfiguration()
-            {
-                StringPrefixes = new[] { "!" }
-            });*/
-            
+            discord.UseVoiceNext();
             SlashCommandsExtension slash = discord.UseSlashCommands();
 
-            //cne.RegisterCommands<ChatRecorderCommands>();
-            slash.RegisterCommands<ChatRecorderCommands>();
-
+            slash.RegisterCommands<Chat_Recorder.ChatRecorderCommands>();
+            slash.RegisterCommands<Music_Player.MusicPlayerCommands>(724358800517365851);
+            
             await discord.ConnectAsync();
             Console.WriteLine("Connected");
             while(Console.ReadLine() != "stop");
-            //await Task.Delay(-1);
         }
     }
 }

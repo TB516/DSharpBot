@@ -55,6 +55,14 @@
             "DSharpPlus.SlashCommands": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "DSharpPlus.VoiceNext": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "YTSearch.NET": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VyZhMY+R4vaJPfgpMj697TA6xALeCrxkmdvLNQO4H27UYtB0ObZR2k2z0druMfqRubOaYQXkr75VfUzwnW/RpQ==",
+  "dgSpecHash": "Sn/Ax62rs8ogNzsu01PZv5aYWlO0s3BIC/Z7gh7tHsaNd93TDy/uCrofCpncIFOYmwSpDHqhRXPexDLIQpbOWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\tberr\\OneDrive\\Documents\\Code\\DSharpBot\\DSharpBot.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\tberr\\.nuget\\packages\\dsharpplus.commandsnext\\4.3.0\\dsharpplus.commandsnext.4.3.0.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\dsharpplus.interactivity\\4.3.0\\dsharpplus.interactivity.4.3.0.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\dsharpplus.slashcommands\\4.3.0\\dsharpplus.slashcommands.4.3.0.nupkg.sha512",
+    "C:\\Users\\tberr\\.nuget\\packages\\dsharpplus.voicenext\\4.3.0\\dsharpplus.voicenext.4.3.0.nupkg.sha512",
+    "C:\\Users\\tberr\\.nuget\\packages\\dsharpplus.voicenext.natives\\1.0.0\\dsharpplus.voicenext.natives.1.0.0.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\emzi0767.common\\2.6.2\\emzi0767.common.2.6.2.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
@@ -83,7 +85,8 @@
     "C:\\Users\\tberr\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
     "C:\\Users\\tberr\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
-    "C:\\Users\\tberr\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Users\\tberr\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\tberr\\.nuget\\packages\\ytsearch.net\\1.0.1\\ytsearch.net.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }

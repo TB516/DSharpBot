@@ -2,7 +2,7 @@
 using DSharpPlus.SlashCommands;
 using System.Threading.Tasks;
 
-namespace DSharpBot
+namespace DSharpBot.Chat_Recorder
 {
     class ChatRecorderCommands : ApplicationCommandModule
     {
@@ -13,12 +13,12 @@ namespace DSharpBot
             {
                 if(ChatRecorder.ChatRecorders[i].ConversationTopic == conversationTopic)
                 {
-                    ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DSharpPlus.Entities.DiscordInteractionResponseBuilder().WithContent($"Recording with the topic \"{conversationTopic}\" is already running"));
+                    await ctx.CreateResponseAsync($"Recording with the topic \"{conversationTopic}\" is already running");
                     return;
                 }    
             }
             ChatRecorder.ChatRecorders.Add(new ChatRecorder(ctx.Channel, conversationTopic));
-            ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DSharpPlus.Entities.DiscordInteractionResponseBuilder().WithContent($"Started recording this chat! \nThis recording is about \"{conversationTopic}\"."));
+            await ctx.CreateResponseAsync($"Started recording this chat! \nThis recording is about \"{conversationTopic}\".");
         }
         
         [SlashCommand("stopRec", "Ends the recording of the specified topic in the channel called in.")]
@@ -30,7 +30,7 @@ namespace DSharpBot
                 {
                     ChatRecorder.ChatRecorders[i].Dispose();
                     ChatRecorder.ChatRecorders.RemoveAt(i);
-                    ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DSharpPlus.Entities.DiscordInteractionResponseBuilder().WithContent($"Recording about \"{conversationTopic}\" ended!"));
+                    await ctx.CreateResponseAsync($"Recording about \"{conversationTopic}\" ended!");
                     return;
                 }
             }

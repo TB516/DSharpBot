@@ -90,6 +90,45 @@
           }
         }
       },
+      "DSharpPlus.VoiceNext/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "DSharpPlus": "4.3.0",
+          "DSharpPlus.VoiceNext.Natives": "1.0.0",
+          "System.Threading.Channels": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DSharpPlus.VoiceNext.Natives/1.0.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x64/native/libopus.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libsodium.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libopus.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libsodium.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "Emzi0767.Common/2.6.2": {
         "type": "package",
         "dependencies": {
@@ -1382,6 +1421,15 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
+      },
+      "YTSearch.NET/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/YTSearch.NET.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/YTSearch.NET.dll": {}
+        }
       }
     }
   },
@@ -1457,6 +1505,35 @@
         "dsharpplus.slashcommands.nuspec",
         "lib/netstandard2.0/DSharpPlus.SlashCommands.dll",
         "lib/netstandard2.0/DSharpPlus.SlashCommands.xml"
+      ]
+    },
+    "DSharpPlus.VoiceNext/4.3.0": {
+      "sha512": "4kl8i+T4Mk6ZuqJeu+h0D4i+sCDxOyFe/TmQ0xzjbL7M6lz+KbJA9ZeEcLyrB8SyGmBb8wZSKvXOGT4TWdIFNA==",
+      "type": "package",
+      "path": "dsharpplus.voicenext/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dsharpplus.png",
+        "dsharpplus.voicenext.4.3.0.nupkg.sha512",
+        "dsharpplus.voicenext.nuspec",
+        "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
+        "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
+      ]
+    },
+    "DSharpPlus.VoiceNext.Natives/1.0.0": {
+      "sha512": "U+UtMpommsfh+OOgLYQBy1e+53P/q6/LW18bgIJqsyshhThhiyEH8ISnpESdQrcqEDj6Nud7+FbnNi7N4QtDGw==",
+      "type": "package",
+      "path": "dsharpplus.voicenext.natives/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dsharpplus.voicenext.natives.1.0.0.nupkg.sha512",
+        "dsharpplus.voicenext.natives.nuspec",
+        "runtimes/win-x64/native/libopus.dll",
+        "runtimes/win-x64/native/libsodium.dll",
+        "runtimes/win-x86/native/libopus.dll",
+        "runtimes/win-x86/native/libsodium.dll"
       ]
     },
     "Emzi0767.Common/2.6.2": {
@@ -4445,6 +4522,20 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "YTSearch.NET/1.0.1": {
+      "sha512": "BO9bKkLnz7Gh7pEPgyQNcKWtbzrl4DGhYLkgdTjqvW7tHuWNvpG4aCVHBWz9GrexuCFh29uDlYSSuBmrdU45GQ==",
+      "type": "package",
+      "path": "ytsearch.net/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net6.0/YTSearch.NET.dll",
+        "ytsearch.net.1.0.1.nupkg.sha512",
+        "ytsearch.net.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -4452,7 +4543,9 @@
       "DSharpPlus >= 4.3.0",
       "DSharpPlus.CommandsNext >= 4.3.0",
       "DSharpPlus.Interactivity >= 4.3.0",
-      "DSharpPlus.SlashCommands >= 4.3.0"
+      "DSharpPlus.SlashCommands >= 4.3.0",
+      "DSharpPlus.VoiceNext >= 4.3.0",
+      "YTSearch.NET >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -4509,6 +4602,14 @@
           "DSharpPlus.SlashCommands": {
             "target": "Package",
             "version": "[4.3.0, )"
+          },
+          "DSharpPlus.VoiceNext": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
+          "YTSearch.NET": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           }
         },
         "imports": [
