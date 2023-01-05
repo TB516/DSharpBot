@@ -8,6 +8,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -44,8 +45,6 @@ namespace DSharpBot.Music_Player
                 OverwriteFiles = true
             };
 
-            _pcmCTS = new();
-
             Program.discord.VoiceStateUpdated += CheckForAutoDisconnectAsync;
         }
         public async Task ConnectAsync(InteractionContext ctx)
@@ -56,12 +55,12 @@ namespace DSharpBot.Music_Player
         }
         public void Disconnect()
         {
-            if (_pcm != null)
+            if (_pcm != null && _pcmCTS != null)
             {
                 _pcmCTS.Cancel();
                 _pcm.Flush();
                 _pcm.Close();
-                _pcm.Dispose();
+                _playlist.RemoveRange(1, _playlist.Count-1);
             }
             _connection.Disconnect();
             RemoveSongFromDrive();
@@ -81,7 +80,7 @@ namespace DSharpBot.Music_Player
 
             RemoveSongFromDrive();
 
-            do
+            while (_playlist.Count >= 1)
             {
                 DownloadSong(_playlist[0]);
 
@@ -91,20 +90,67 @@ namespace DSharpBot.Music_Player
 
                 _playlist.RemoveAt(0);
                 RemoveSongFromDrive();
-            } while (_playlist.Count >= 1);
+            }
 
             IsPlaying = false;
             Console.WriteLine("Finished playlist");
         }
-        public void SkipSong()
+        public bool SkipSong()
         {
+            if (_pcmCTS == null && _pcm == null)
+            {
+                return false;
+            }
+
             _pcmCTS.Cancel();
             _pcm.Flush();
             _pcm.Close();
+            return true;    
+        }
+        public DiscordEmbed GetQueueEmbed()
+        {
+            DiscordEmbedBuilder queue = new();
+
+            if (_playlist.Count == 0)
+            {
+                return queue.AddField("Playing now", "Nothing :(");
+            }
+
+            queue.AddField("Playing now", _playlist[0].ToString());
+
+            for (int i = 1; i < _playlist.Count; i++)
+            {
+                queue.AddField($"{i}.", _playlist[i].ToString());
+            }
+            
+            return queue;
+        }
+        public Song RemoveSong(Song song)
+        {
+            for(int i = 0; i < _playlist.Count; i++)
+            {
+                if (_playlist[i].SongName == song.SongName)
+                {
+                    return RemoveAt(i);
+                }
+            }
+            return null;
+        }
+        public Song RemoveAt(int position)
+        {
+            if (position >= _playlist.Count || position <= 0)
+            {
+                return null;
+            }
+
+            Song song = _playlist[position];
+            _playlist.RemoveAt(position);
+            return song;
         }
         private void PlaySong()
         {
             VoiceTransmitSink transmitSink = _connection.GetTransmitSink();
+            _pcmCTS = new();
 
             //Converts the mp3 file to bite stream
             using (_pcm = Process.Start(new ProcessStartInfo
@@ -122,7 +168,10 @@ namespace DSharpBot.Music_Player
                 {
                     Thread.Sleep(100);
                 }
+                _pcmCTS.Dispose();
             }
+            _pcmCTS = null;
+            _pcm = null;
         }
         private void DownloadSong(Song song)
         {
