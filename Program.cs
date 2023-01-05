@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DSharpPlus;
-using DSharpPlus.CommandsNext;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.VoiceNext;
 

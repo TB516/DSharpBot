@@ -1,9 +1,4 @@
-﻿using DSharpPlus;
-using DSharpPlus.SlashCommands;
-using DSharpPlus.VoiceNext;
-using Emzi0767.Utilities;
-using System;
-using System.Runtime.InteropServices;
+﻿using DSharpPlus.SlashCommands;
 using System.Threading.Tasks;
 using static DSharpBot.Music_Player.MusicPlayer;
 
@@ -25,7 +20,7 @@ namespace DSharpBot.Music_Player
                 return;
             }
 
-            Players.Add(ctx.Guild, new());
+            Players.Add(ctx.Guild, new(ctx));
             await Players[ctx.Guild].ConnectAsync(ctx);
 
             ctx.CreateResponseAsync("Joined call!");
@@ -52,10 +47,22 @@ namespace DSharpBot.Music_Player
             ctx.CreateResponseAsync("Disconnected from call!");
         }
 
-        [SlashCommand("SongTest", "Song test")]
-        public async Task SongTest(InteractionContext ctx, [Option("Song", "Url or search quary")] string input)
+        [SlashCommand("Skip", "Skips the current song")]
+        public async Task SkipSong(InteractionContext ctx)
         {
-            ctx.CreateResponseAsync(new Song(input).ToString());
+            if (!Players.ContainsKey(ctx.Guild))
+            {
+                ctx.CreateResponseAsync("The bot is not in a call!");
+                return;
+            }
+            else if (!Players[ctx.Guild].IsPlaying)
+            {
+                ctx.CreateResponseAsync("The bot is not currently playing a song!");
+                return;
+            }
+
+            ctx.CreateResponseAsync("Skipped current song!");
+            Players[ctx.Guild].SkipSong();
         }
         
         [SlashCommand("Play", "Plays a song")]
@@ -84,7 +91,7 @@ namespace DSharpBot.Music_Player
 
             if (!Players[ctx.Guild].IsPlaying)
             {
-                Players[ctx.Guild].PlayThroughPlaylist(ctx);
+                Players[ctx.Guild].PlayThroughPlaylist();
             }
         }
     }

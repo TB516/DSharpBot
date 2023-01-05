@@ -1422,6 +1422,22 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "YoutubeDLSharp/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/YoutubeDLSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/YoutubeDLSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "YTSearch.NET/1.0.1": {
         "type": "package",
         "compile": {
@@ -4523,6 +4539,21 @@
         "version.txt"
       ]
     },
+    "YoutubeDLSharp/0.4.3": {
+      "sha512": "yhXjn/Hyd335ALpnqKF2DxNQGuLNMenlz/0zNIw+sp+OP3c398H3ijjUehSVvn9bkZgdnvltKBMMAsNBB3+vUA==",
+      "type": "package",
+      "path": "youtubedlsharp/0.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/YoutubeDLSharp.dll",
+        "lib/net45/YoutubeDLSharp.xml",
+        "lib/netstandard2.0/YoutubeDLSharp.dll",
+        "lib/netstandard2.0/YoutubeDLSharp.xml",
+        "youtubedlsharp.0.4.3.nupkg.sha512",
+        "youtubedlsharp.nuspec"
+      ]
+    },
     "YTSearch.NET/1.0.1": {
       "sha512": "BO9bKkLnz7Gh7pEPgyQNcKWtbzrl4DGhYLkgdTjqvW7tHuWNvpG4aCVHBWz9GrexuCFh29uDlYSSuBmrdU45GQ==",
       "type": "package",
@@ -4545,7 +4576,8 @@
       "DSharpPlus.Interactivity >= 4.3.0",
       "DSharpPlus.SlashCommands >= 4.3.0",
       "DSharpPlus.VoiceNext >= 4.3.0",
-      "YTSearch.NET >= 1.0.1"
+      "YTSearch.NET >= 1.0.1",
+      "YoutubeDLSharp >= 0.4.3"
     ]
   },
   "packageFolders": {
@@ -4610,6 +4642,10 @@
           "YTSearch.NET": {
             "target": "Package",
             "version": "[1.0.1, )"
+          },
+          "YoutubeDLSharp": {
+            "target": "Package",
+            "version": "[0.4.3, )"
           }
         },
         "imports": [
