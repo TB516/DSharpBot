@@ -6,9 +6,15 @@
     <StartupObject>DSharpBot.Program</StartupObject>
     <ApplicationIcon>upset00.ico</ApplicationIcon>
   </PropertyGroup>
-
+	
   <ItemGroup>
+    <Content Include="ffmpeg.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="upset00.ico" />
+    <Content Include="yt-dlp.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

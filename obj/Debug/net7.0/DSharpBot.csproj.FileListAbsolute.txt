@@ -31,3 +31,5 @@ C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\obj\Debug\net7.0\refint\DSharpB
 C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\obj\Debug\net7.0\DSharpBot.pdb
 C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\obj\Debug\net7.0\DSharpBot.genruntimeconfig.cache
 C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\obj\Debug\net7.0\ref\DSharpBot.dll
+C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\bin\Debug\net7.0\ffmpeg.exe
+C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\bin\Debug\net7.0\yt-dlp.exe

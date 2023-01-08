@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoutubeDLSharp;
@@ -78,7 +79,8 @@ namespace DSharpBot.Music_Player
                 YoutubeDLPath = Directory.GetCurrentDirectory() + "\\yt-dlp.exe",
                 OutputFolder = Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\Songs").ToString(),
                 OutputFileTemplate = ctx.Guild.Id.ToString() + ".mp3",
-                OverwriteFiles = true
+                OverwriteFiles = true,
+                IgnoreDownloadErrors = false,
             };
 
             Program.discord.VoiceStateUpdated += CheckForAutoDisconnectAsync;
