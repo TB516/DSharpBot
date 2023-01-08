@@ -25,7 +25,7 @@ namespace DSharpBot
             SlashCommandsExtension slash = discord.UseSlashCommands();
 
             slash.RegisterCommands<Chat_Recorder.ChatRecorderCommands>();
-            slash.RegisterCommands<Music_Player.MusicPlayerCommands>(724358800517365851);
+            slash.RegisterCommands<Music_Player.MusicPlayerCommands>();
             
             await discord.ConnectAsync();
             Console.WriteLine("Connected");

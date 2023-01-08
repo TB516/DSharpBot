@@ -139,14 +139,7 @@ namespace DSharpBot.Music_Player
 
                 new DiscordMessageBuilder().WithContent($"Now playing {_playlist[0].SongName}!").SendAsync(_connection.TargetChannel.Guild.Channels[_interactionChannel]);
                 
-                try
-                {
-                    PlaySong();
-                }
-                catch
-                {
-                    new DiscordMessageBuilder().WithContent($"There was an error playing {_playlist[0].SongName}!");
-                }
+                PlaySong();
                 
                 _playlist.RemoveAt(0);
                 RemoveSongFromDrive();
@@ -230,13 +223,8 @@ namespace DSharpBot.Music_Player
         /// Plays song file with name of the guildId that the bot is in. Will wait untill data is finished transmiting,
         /// or untill process is cancled to finish method execution
         /// </summary>
-        /// <exception cref="FileNotFoundException">If file to play doesnt exist, throw exception</exception>
         private void PlaySong()
         {
-            if (!File.Exists(_ytdl.OutputFolder + "\\" + _ytdl.OutputFileTemplate))
-            {
-                throw new FileNotFoundException(); 
-            }
             VoiceTransmitSink transmitSink = _connection.GetTransmitSink();
             _pcmCTS = new();
 
