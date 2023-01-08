@@ -8,6 +8,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # User-specific files
+/DSharpBot.csproj.user
+/Properties/PublishProfiles
 *.rsuser
 *.suo
 *.user
@@ -21,6 +23,7 @@
 mono_crash.*
 
 # Build results
+/bin/Debug/net7.0
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
