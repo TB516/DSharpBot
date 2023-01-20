@@ -9,7 +9,8 @@
 
 # User-specific files
 /DSharpBot.csproj.user
-/Properties/PublishProfiles
+/Properties	
+/obj
 *.rsuser
 *.suo
 *.user
@@ -46,7 +47,7 @@ bld/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
-
+/.vs
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
