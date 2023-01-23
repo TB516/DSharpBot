@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.SlashCommands;
@@ -10,7 +11,7 @@ namespace DSharpBot
     {
         public static DiscordClient discord = new DiscordClient(new DiscordConfiguration()
         {
-            Token = System.Environment.GetEnvironmentVariable("BotKey"),
+            Token = File.ReadAllLines("BotKey.txt")[0],
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged
         });

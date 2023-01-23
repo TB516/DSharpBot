@@ -33,3 +33,4 @@ C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\obj\Debug\net7.0\DSharpBot.genr
 C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\obj\Debug\net7.0\ref\DSharpBot.dll
 C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\bin\Debug\net7.0\ffmpeg.exe
 C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\bin\Debug\net7.0\yt-dlp.exe
+C:\Users\tberr\OneDrive\Documents\Code\DSharpBot\bin\Debug\net7.0\BotKey.txt
