@@ -92,9 +92,7 @@ namespace DSharpBot.Music_Player
         /// <returns>Task representing async process</returns>
         public async Task ConnectAsync(InteractionContext ctx)
         {
-            await ctx.Member.VoiceState.Channel.ConnectAsync();
-            
-            _connection = ctx.Client.GetVoiceNext().GetConnection(ctx.Guild);
+            _connection = await ctx.Member.VoiceState.Channel.ConnectAsync();
         }
         /// <summary>
         /// Cancels any stream transmitions if any are occuring, then disconnects the bot from call and removes any leftover song files from the drive

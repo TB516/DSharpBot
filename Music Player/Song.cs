@@ -46,7 +46,7 @@ namespace DSharpBot.Music_Player
         /// <returns>Url in form of URI</returns>
         private static Uri GetUrl(string searchTerm)
         {
-            return new(new YouTubeSearchClient().SearchYoutubeAsync(searchTerm).Result.Results.ToArray()[0].Url);
+            return new(new YouTubeSearchClient().SearchYoutubeVideoAsync(searchTerm).Result.Results.ToArray()[0].Url);
         }
         /// <summary>
         /// Takes a URI that holds the url and returns the title of the youtube video
