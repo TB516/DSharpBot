@@ -27,7 +27,7 @@ namespace DSharpBot
 
             slash.RegisterCommands<Chat_Recorder.ChatRecorderCommands>();
             slash.RegisterCommands<Music_Player.MusicPlayerCommands>();
-            
+
             await discord.ConnectAsync();
             Console.WriteLine("Connected");
             while(Console.ReadLine() != "stop");
